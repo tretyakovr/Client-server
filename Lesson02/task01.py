@@ -73,7 +73,7 @@ def write_to_csv(file):
     res_data = [MAIN_DATA, os_prod_list, os_name_list, os_code_list, os_type_list]
 
     with open('main_data.csv', 'w') as output_file:
-        output_file_writer = csv.writer(output_file)
+        output_file_writer = csv.writer(output_file, quoting=csv.QUOTE_NONNUMERIC)
         for row in res_data:
             output_file_writer.writerow(row)
 
