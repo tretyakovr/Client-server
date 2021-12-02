@@ -1,0 +1,11 @@
+02-12-2021 23:00:08.444 INFO       server     Логгер успешно создан: <Logger server (INFO)>
+02-12-2021 23:00:08.445 INFO       server     Определены параметры командной строки: host = , port = 7777
+02-12-2021 23:00:08.446 INFO       server     Сокет успешно создан: <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+02-12-2021 23:00:12.222 INFO       server     Установлено соединение с <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59648)> ('127.0.0.1', 59648)
+02-12-2021 23:00:12.222 INFO       server     Получено сообщение от клиента: Hello!
+02-12-2021 23:00:14.920 INFO       server     Получено сообщение от клиента: 11
+02-12-2021 23:00:15.347 INFO       server     Получено сообщение от клиента: 22
+02-12-2021 23:00:17.073 INFO       server     Получено сообщение от клиента: 333
+02-12-2021 23:00:18.337 INFO       server     Получено сообщение от клиента: close_connection
+02-12-2021 23:00:18.340 INFO       server     Останавливаем сервер
+02-12-2021 23:00:18.340 INFO       server     Свервер остановлен

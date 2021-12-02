@@ -1,5 +1,5 @@
-import sys
-from service import encode_msg, decode_msg, create_socket, parse_client_params, get_logger
+import sys, logging, log.client_log_config, log.server_log_config
+from service import encode_msg, decode_msg, create_socket, parse_client_params
 
 
 def make_connection(s, h, p):
@@ -54,6 +54,18 @@ def close_connection(s):
     log.info(f'Соединение закрыто')
 
 
+def get_logger():
+    l = None
+    try:
+        l = logging.getLogger('client')
+    except Exception as e:
+        print(f'Возникла ошибка при создании логгера {str(e)}')
+        sys.exit(1)
+    else:
+        l.info(f'Логгер успешно создан: {l}')
+
+    return l
+
 """
 1. Стартуем логгирование
 2. Проверяем параметры командной строки
@@ -65,7 +77,7 @@ def close_connection(s):
 6. Закрываем соединение
 """
 if __name__ == '__main__':
-    log = get_logger('client')
+    log = get_logger()
     if log:
         host, port = parse_client_params(sys.argv)
         log.info(f'Определены параметры командной строки: host = {host}, port = {port}')

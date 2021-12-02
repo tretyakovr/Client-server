@@ -1,5 +1,9 @@
+import os
 import logging
 from logging.handlers import TimedRotatingFileHandler
+
+PATH = os.path.dirname(os.path.abspath(__file__))
+PATH = os.path.join(PATH, 'server.log')
 
 logger = logging.getLogger('server')
 
@@ -9,12 +13,10 @@ strfmt = '%(asctime)s.%(msecs)03d %(levelname)-10s %(name)-10s %(message)s'
 # Устанавливаем формат даты
 datefmt = '%d-%m-%Y %H:%M:%S'
 formatter = logging.Formatter(fmt=strfmt, datefmt=datefmt)
-fh = logging.FileHandler('server.log', encoding='utf-8')
+fh = TimedRotatingFileHandler(PATH, when='midnight', encoding='utf-8')
 fh.setLevel(logging.INFO)
 fh.setFormatter(formatter)
 
 logger.addHandler(fh)
-logger.addHandler(TimedRotatingFileHandler('client.log', when='midnight'))
-# logger.addHandler(TimedRotatingFileHandler('server.log', when='M', interval=10))
 logger.setLevel(logging.INFO)
 logger.propagate = False

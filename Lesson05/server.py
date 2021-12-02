@@ -1,5 +1,5 @@
 from socket import *
-import sys
+import sys, logging, log.client_log_config, log.server_log_config
 from service import encode_msg, decode_msg, create_socket, encode_reply, parse_server_params, get_logger
 
 
@@ -38,6 +38,18 @@ def close_connection(c):
     log.info('Свервер остановлен')
 
 
+def get_logger():
+    l = None
+    try:
+        l = logging.getLogger('server')
+    except Exception as e:
+        print(f'Возникла ошибка при создании логгера {str(e)}')
+        sys.exit(1)
+    else:
+        l.info(f'Логгер успешно создан: {l}')
+
+    return l
+
 """
 1. Стартуем логгирование
 2. Проверяем параметры командной строки
@@ -48,7 +60,7 @@ def close_connection(c):
 5. При получении запроса на разрыв закрываем соединение
 """
 if __name__ == '__main__':
-    log = get_logger('server')
+    log = get_logger()
     if log:
         hosts, port = parse_server_params(sys.argv)
         log.info(f'Определены параметры командной строки: host = {hosts}, port = {port}')

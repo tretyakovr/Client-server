@@ -1,7 +1,7 @@
 from socket import *
 import sys
 import json
-import logging, log.client_log_config, log.server_log_config
+import logging
 
 
 def parse_client_params(params):

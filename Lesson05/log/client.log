@@ -1,0 +1,14 @@
+02-12-2021 23:00:12.218 INFO       client     Логгер успешно создан: <Logger client (INFO)>
+02-12-2021 23:00:12.219 INFO       client     Определены параметры командной строки: host = localhost, port = 7777
+02-12-2021 23:00:12.219 INFO       client     Сокет успешно создан: <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+02-12-2021 23:00:12.222 INFO       client     Отправка сообщения Hello! на сервер
+02-12-2021 23:00:12.222 INFO       client     Status == OK!
+02-12-2021 23:00:14.919 INFO       client     Отправка сообщения 11 на сервер
+02-12-2021 23:00:14.920 INFO       client     Status == OK!
+02-12-2021 23:00:15.347 INFO       client     Отправка сообщения 22 на сервер
+02-12-2021 23:00:15.350 INFO       client     Status == OK!
+02-12-2021 23:00:17.072 INFO       client     Отправка сообщения 333 на сервер
+02-12-2021 23:00:17.073 INFO       client     Status == OK!
+02-12-2021 23:00:18.337 INFO       client     Инициируем разрыв соединения
+02-12-2021 23:00:18.337 INFO       client     Отправка сообщения close_connection на сервер
+02-12-2021 23:00:18.337 INFO       client     Соединение закрыто
