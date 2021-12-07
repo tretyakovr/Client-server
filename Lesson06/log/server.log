@@ -1,0 +1,94 @@
+07-12-2021 12:18:56.678 INFO       server     Декоратор: обращение к функции get_logger с параметрами (), {}
+07-12-2021 12:18:56.679 INFO       server     вызвано из функции     log = get_logger()
+
+07-12-2021 12:18:56.679 INFO       server     Логгер успешно создан: <Logger server (INFO)>
+07-12-2021 12:18:56.679 INFO       server     Декоратор: обращение к функции parse_server_params с параметрами (['/Users/rtretyakov/OneDrive/Geekbrains/Client-Server/Lesson06/server.py'],), {}
+07-12-2021 12:18:56.679 INFO       server     вызвано из функции     hosts, port = parse_server_params(sys.argv)
+
+07-12-2021 12:18:56.679 INFO       server     Определены параметры командной строки: host = , port = 7777
+07-12-2021 12:18:56.679 INFO       server     Декоратор: обращение к функции create_socket с параметрами ('server',), {}
+07-12-2021 12:18:56.679 INFO       server     вызвано из функции     socket = create_socket('server')
+
+07-12-2021 12:18:56.679 INFO       server     Сокет успешно создан: <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+07-12-2021 12:18:56.679 INFO       server     Декоратор: обращение к функции make_connection с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>, '', 7777), {}
+07-12-2021 12:18:56.680 INFO       server     вызвано из функции     client = make_connection(socket, hosts, port)
+
+07-12-2021 12:19:02.293 INFO       server     Установлено соединение с <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58817)> ('127.0.0.1', 58817)
+07-12-2021 12:19:02.294 INFO       server     Декоратор: обращение к функции exchange_msg с параметрами (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58817)>,), {}
+07-12-2021 12:19:02.294 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:02.295 INFO       server     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "msg", "message": "Hello!"}',), {}
+07-12-2021 12:19:02.295 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:02.295 INFO       server     Получено сообщение от клиента: Hello!
+07-12-2021 12:19:02.295 INFO       server     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58817)>, 'Уведомление об успешном получении сообщения'), {}
+07-12-2021 12:19:02.295 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:02.295 INFO       server     Декоратор: обращение к функции encode_reply с параметрами ('Уведомление об успешном получении сообщения',), {}
+07-12-2021 12:19:02.295 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:05.320 INFO       server     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "msg", "message": "a"}',), {}
+07-12-2021 12:19:05.320 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:05.321 INFO       server     Получено сообщение от клиента: a
+07-12-2021 12:19:05.322 INFO       server     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58817)>, 'Уведомление об успешном получении сообщения'), {}
+07-12-2021 12:19:05.322 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:05.323 INFO       server     Декоратор: обращение к функции encode_reply с параметрами ('Уведомление об успешном получении сообщения',), {}
+07-12-2021 12:19:05.324 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:05.631 INFO       server     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "msg", "message": "s"}',), {}
+07-12-2021 12:19:05.632 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:05.632 INFO       server     Получено сообщение от клиента: s
+07-12-2021 12:19:05.633 INFO       server     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58817)>, 'Уведомление об успешном получении сообщения'), {}
+07-12-2021 12:19:05.633 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:05.633 INFO       server     Декоратор: обращение к функции encode_reply с параметрами ('Уведомление об успешном получении сообщения',), {}
+07-12-2021 12:19:05.634 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:05.933 INFO       server     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "msg", "message": "d"}',), {}
+07-12-2021 12:19:05.934 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:05.934 INFO       server     Получено сообщение от клиента: d
+07-12-2021 12:19:05.935 INFO       server     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58817)>, 'Уведомление об успешном получении сообщения'), {}
+07-12-2021 12:19:05.935 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:05.936 INFO       server     Декоратор: обращение к функции encode_reply с параметрами ('Уведомление об успешном получении сообщения',), {}
+07-12-2021 12:19:05.936 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:06.215 INFO       server     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "msg", "message": "f"}',), {}
+07-12-2021 12:19:06.216 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:06.217 INFO       server     Получено сообщение от клиента: f
+07-12-2021 12:19:06.217 INFO       server     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58817)>, 'Уведомление об успешном получении сообщения'), {}
+07-12-2021 12:19:06.217 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:06.218 INFO       server     Декоратор: обращение к функции encode_reply с параметрами ('Уведомление об успешном получении сообщения',), {}
+07-12-2021 12:19:06.219 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:06.520 INFO       server     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "msg", "message": "g"}',), {}
+07-12-2021 12:19:06.520 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:06.521 INFO       server     Получено сообщение от клиента: g
+07-12-2021 12:19:06.522 INFO       server     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58817)>, 'Уведомление об успешном получении сообщения'), {}
+07-12-2021 12:19:06.522 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:06.522 INFO       server     Декоратор: обращение к функции encode_reply с параметрами ('Уведомление об успешном получении сообщения',), {}
+07-12-2021 12:19:06.523 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:06.721 INFO       server     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "quit", "message": "close_connection"}',), {}
+07-12-2021 12:19:06.723 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:06.724 INFO       server     Получено сообщение от клиента: close_connection
+07-12-2021 12:19:06.725 INFO       server     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58817)>, 'Уведомление об успешном получении сообщения'), {}
+07-12-2021 12:19:06.726 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:06.726 INFO       server     Декоратор: обращение к функции encode_reply с параметрами ('Уведомление об успешном получении сообщения',), {}
+07-12-2021 12:19:06.726 INFO       server     вызвано из функции     exchange_msg(client)
+
+07-12-2021 12:19:06.726 INFO       server     Декоратор: обращение к функции close_connection с параметрами (<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58817)>,), {}
+07-12-2021 12:19:06.727 INFO       server     вызвано из функции     close_connection(client)
+
+07-12-2021 12:19:06.727 INFO       server     Останавливаем сервер
+07-12-2021 12:19:06.727 INFO       server     Свервер остановлен

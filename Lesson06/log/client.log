@@ -1,0 +1,114 @@
+07-12-2021 12:19:02.288 INFO       client     Декоратор: обращение к функции get_logger с параметрами (), {}
+07-12-2021 12:19:02.288 INFO       client     вызвано из функции     log = get_logger()
+
+07-12-2021 12:19:02.288 INFO       client     Логгер успешно создан: <Logger client (INFO)>
+07-12-2021 12:19:02.289 INFO       client     Декоратор: обращение к функции parse_client_params с параметрами (['/Users/rtretyakov/OneDrive/Geekbrains/Client-Server/Lesson06/client.py'],), {}
+07-12-2021 12:19:02.289 INFO       client     вызвано из функции     host, port = parse_client_params(sys.argv)
+
+07-12-2021 12:19:02.290 INFO       client     Определены параметры командной строки: host = localhost, port = 7777
+07-12-2021 12:19:02.290 INFO       client     Декоратор: обращение к функции create_socket с параметрами ('client',), {}
+07-12-2021 12:19:02.291 INFO       client     вызвано из функции     socket = create_socket('client')
+
+07-12-2021 12:19:02.291 INFO       client     Сокет успешно создан: <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+07-12-2021 12:19:02.291 INFO       client     Декоратор: обращение к функции make_connection с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>, 'localhost', 7777), {}
+07-12-2021 12:19:02.291 INFO       client     вызвано из функции     make_connection(socket, host, port)
+
+07-12-2021 12:19:02.293 INFO       client     Декоратор: обращение к функции exchange_msg с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>,), {}
+07-12-2021 12:19:02.294 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:02.294 INFO       client     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>, 'Hello!'), {}
+07-12-2021 12:19:02.294 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:02.294 INFO       client     Отправка сообщения Hello! на сервер
+07-12-2021 12:19:02.294 INFO       client     Декоратор: обращение к функции encode_msg с параметрами ('Hello!',), {}
+07-12-2021 12:19:02.294 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:02.295 INFO       client     Декоратор: обращение к функции recieve_response с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>,), {}
+07-12-2021 12:19:02.295 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:02.296 INFO       client     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "reply", "status": 200, "message": "\\u0423\\u0432\\u0435\\u0434\\u043e\\u043c\\u043b\\u0435\\u043d\\u0438\\u0435 \\u043e\\u0431 \\u0443\\u0441\\u043f\\u0435\\u0448\\u043d\\u043e\\u043c \\u043f\\u043e\\u043b\\u0443\\u0447\\u0435\\u043d\\u0438\\u0438 \\u0441\\u043e\\u043e\\u0431\\u0449\\u0435\\u043d\\u0438\\u044f"}',), {}
+07-12-2021 12:19:02.296 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:02.296 INFO       client     Status == OK!
+07-12-2021 12:19:05.318 INFO       client     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>, 'a'), {}
+07-12-2021 12:19:05.319 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.319 INFO       client     Отправка сообщения a на сервер
+07-12-2021 12:19:05.319 INFO       client     Декоратор: обращение к функции encode_msg с параметрами ('a',), {}
+07-12-2021 12:19:05.319 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.319 INFO       client     Декоратор: обращение к функции recieve_response с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>,), {}
+07-12-2021 12:19:05.320 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.325 INFO       client     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "reply", "status": 200, "message": "\\u0423\\u0432\\u0435\\u0434\\u043e\\u043c\\u043b\\u0435\\u043d\\u0438\\u0435 \\u043e\\u0431 \\u0443\\u0441\\u043f\\u0435\\u0448\\u043d\\u043e\\u043c \\u043f\\u043e\\u043b\\u0443\\u0447\\u0435\\u043d\\u0438\\u0438 \\u0441\\u043e\\u043e\\u0431\\u0449\\u0435\\u043d\\u0438\\u044f"}',), {}
+07-12-2021 12:19:05.325 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.325 INFO       client     Status == OK!
+07-12-2021 12:19:05.630 INFO       client     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>, 's'), {}
+07-12-2021 12:19:05.630 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.630 INFO       client     Отправка сообщения s на сервер
+07-12-2021 12:19:05.630 INFO       client     Декоратор: обращение к функции encode_msg с параметрами ('s',), {}
+07-12-2021 12:19:05.631 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.631 INFO       client     Декоратор: обращение к функции recieve_response с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>,), {}
+07-12-2021 12:19:05.631 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.636 INFO       client     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "reply", "status": 200, "message": "\\u0423\\u0432\\u0435\\u0434\\u043e\\u043c\\u043b\\u0435\\u043d\\u0438\\u0435 \\u043e\\u0431 \\u0443\\u0441\\u043f\\u0435\\u0448\\u043d\\u043e\\u043c \\u043f\\u043e\\u043b\\u0443\\u0447\\u0435\\u043d\\u0438\\u0438 \\u0441\\u043e\\u043e\\u0431\\u0449\\u0435\\u043d\\u0438\\u044f"}',), {}
+07-12-2021 12:19:05.636 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.636 INFO       client     Status == OK!
+07-12-2021 12:19:05.932 INFO       client     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>, 'd'), {}
+07-12-2021 12:19:05.932 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.932 INFO       client     Отправка сообщения d на сервер
+07-12-2021 12:19:05.933 INFO       client     Декоратор: обращение к функции encode_msg с параметрами ('d',), {}
+07-12-2021 12:19:05.933 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.933 INFO       client     Декоратор: обращение к функции recieve_response с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>,), {}
+07-12-2021 12:19:05.933 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.938 INFO       client     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "reply", "status": 200, "message": "\\u0423\\u0432\\u0435\\u0434\\u043e\\u043c\\u043b\\u0435\\u043d\\u0438\\u0435 \\u043e\\u0431 \\u0443\\u0441\\u043f\\u0435\\u0448\\u043d\\u043e\\u043c \\u043f\\u043e\\u043b\\u0443\\u0447\\u0435\\u043d\\u0438\\u0438 \\u0441\\u043e\\u043e\\u0431\\u0449\\u0435\\u043d\\u0438\\u044f"}',), {}
+07-12-2021 12:19:05.938 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:05.938 INFO       client     Status == OK!
+07-12-2021 12:19:06.214 INFO       client     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>, 'f'), {}
+07-12-2021 12:19:06.215 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:06.215 INFO       client     Отправка сообщения f на сервер
+07-12-2021 12:19:06.215 INFO       client     Декоратор: обращение к функции encode_msg с параметрами ('f',), {}
+07-12-2021 12:19:06.215 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:06.215 INFO       client     Декоратор: обращение к функции recieve_response с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>,), {}
+07-12-2021 12:19:06.216 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:06.220 INFO       client     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "reply", "status": 200, "message": "\\u0423\\u0432\\u0435\\u0434\\u043e\\u043c\\u043b\\u0435\\u043d\\u0438\\u0435 \\u043e\\u0431 \\u0443\\u0441\\u043f\\u0435\\u0448\\u043d\\u043e\\u043c \\u043f\\u043e\\u043b\\u0443\\u0447\\u0435\\u043d\\u0438\\u0438 \\u0441\\u043e\\u043e\\u0431\\u0449\\u0435\\u043d\\u0438\\u044f"}',), {}
+07-12-2021 12:19:06.220 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:06.220 INFO       client     Status == OK!
+07-12-2021 12:19:06.519 INFO       client     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>, 'g'), {}
+07-12-2021 12:19:06.519 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:06.520 INFO       client     Отправка сообщения g на сервер
+07-12-2021 12:19:06.520 INFO       client     Декоратор: обращение к функции encode_msg с параметрами ('g',), {}
+07-12-2021 12:19:06.520 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:06.520 INFO       client     Декоратор: обращение к функции recieve_response с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>,), {}
+07-12-2021 12:19:06.520 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:06.524 INFO       client     Декоратор: обращение к функции decode_msg с параметрами (b'{"action": "reply", "status": 200, "message": "\\u0423\\u0432\\u0435\\u0434\\u043e\\u043c\\u043b\\u0435\\u043d\\u0438\\u0435 \\u043e\\u0431 \\u0443\\u0441\\u043f\\u0435\\u0448\\u043d\\u043e\\u043c \\u043f\\u043e\\u043b\\u0443\\u0447\\u0435\\u043d\\u0438\\u0438 \\u0441\\u043e\\u043e\\u0431\\u0449\\u0435\\u043d\\u0438\\u044f"}',), {}
+07-12-2021 12:19:06.524 INFO       client     вызвано из функции     exchange_msg(socket)
+
+07-12-2021 12:19:06.525 INFO       client     Status == OK!
+07-12-2021 12:19:06.720 INFO       client     Декоратор: обращение к функции close_connection с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>,), {}
+07-12-2021 12:19:06.720 INFO       client     вызвано из функции     close_connection(socket)
+
+07-12-2021 12:19:06.720 INFO       client     Инициируем разрыв соединения
+07-12-2021 12:19:06.720 INFO       client     Декоратор: обращение к функции send_msg с параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58817), raddr=('127.0.0.1', 7777)>, 'close_connection'), {}
+07-12-2021 12:19:06.720 INFO       client     вызвано из функции     close_connection(socket)
+
+07-12-2021 12:19:06.720 INFO       client     Отправка сообщения close_connection на сервер
+07-12-2021 12:19:06.720 INFO       client     Декоратор: обращение к функции encode_msg с параметрами ('close_connection',), {}
+07-12-2021 12:19:06.720 INFO       client     вызвано из функции     close_connection(socket)
+
+07-12-2021 12:19:06.721 INFO       client     Соединение закрыто
